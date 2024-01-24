@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+}
+
+.navbar li {
+    margin: 10px;
+    color: #FFFF;
+
+}
+
+.navbar a {
+    color: #FFFF;
+    text-decoration: none;
+}
+
+.instagram {
+    color: blueviolet !important;
+}
+
+.linkedin {
+    color: darkblue !important;
+}
+

@@ -1,0 +1,15 @@
+.projects {
+    text-align: justify;
+    margin-left: 5%;
+}
+
+.project h1 {
+    font-size: 45px;
+    
+}
+
+.centerButton{
+    display: flex;
+    margin-left: 40%;
+    
+}

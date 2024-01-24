@@ -1,0 +1,35 @@
+/* Footer.module.css */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0; /* Ajuste conforme necessário */
+}
+
+.footer a {
+    color: #FFFFFF !important; /* Cor correta em vez de #FFFF */
+}
+
+.footer li {
+    margin: 15px;
+}
+
+.divText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0; /* Ajuste conforme necessário */
+}
+
+.divText p {
+    margin: 0; /* Ajuste conforme necessário */
+}
