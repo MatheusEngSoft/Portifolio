@@ -7,7 +7,7 @@ function Presentation() {
     const toRotate = [' eu sou Matheus Santos!', 'Desenvolvedor Full-Stack', 'Linguagens de dominio', 'React, HTML, CSS, JavaScript, PHP, Laravel'];
     const [loop, setLoop] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const period = 150;
+    const period = 100;
     const [delta, setDelta] = useState(100);
 
 
