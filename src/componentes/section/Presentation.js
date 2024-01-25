@@ -1,13 +1,47 @@
 import styles from './css/Presentation.module.css'
 import ButtonA from '../elements/ButtonA'
+import {useEffect, useState} from 'react'
 
 function Presentation() {
+    const [text, setText] = useState('');
+    const toRotate = [' eu sou Matheus Santos!', 'Desenvolvedor Full-Stack', 'Linguagens de dominio', 'React, HTML, CSS, JavaScript, PHP, Laravel'];
+    const [loop, setLoop] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const period = 150;
+    const [delta, setDelta] = useState(100);
+
+
+    useEffect(()=>{
+        let ticker = setInterval(()=>{
+            toType()
+        }, delta)
+        return()=>{clearInterval(ticker)}
+
+    }, [text])
+
+    const toType = () =>{
+        let i = loop % toRotate.length;
+        let fullText = toRotate[i]
+        let updatedText = isDeleting ? fullText.substring(0, text.length-1) : fullText.substring(0, text.length+1)
+
+        setText(updatedText);
+
+        if(!isDeleting && updatedText === fullText){
+            setIsDeleting(true);
+            setDelta(period);
+        }else if(isDeleting && updatedText === ''){
+            setIsDeleting(false);
+            setDelta(period);
+            setLoop(loop+1)
+        }
+    }
+
     return (
         <div className = {styles.presentation} id="Presentation">
             <h4><strong>Bem-vindo ao meu Portifólio</strong></h4>
-            <h1>Olá, eu sou Matheus Santos!</h1>
+            <h1>Olá, {text}</h1>
             <p>
-                Sou estudando de Engenheiro de Software no Centro Universitário Leonardo da Vinci (Uniasselvi).<br/>
+                Estou cursando Engenharia de Software no Centro Universitário Leonardo da Vinci (Uniasselvi).<br/>
                 Ao longo da minha jornada pude me envolver em projetos e desenvolvimento de paginas web.<br/>
                 Quero construir minha carreira com o proposito de criar programas e paginas para facilitar manuseio<br/>
                 e a administração das suas empresas.<br/>
